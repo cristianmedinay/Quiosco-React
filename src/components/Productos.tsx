@@ -1,13 +1,7 @@
 import React from 'react'
 
 import {formatearDinero} from '../helpers'    
-interface ProductosProps {
-    id:number,
-    precio: number,
-    nombre: string,
-    imagen: string
-   
-}
+import {ProductosProps} from '../interfaces/interfaces'
 const Productos = (productos: ProductosProps) => {
 
   const {imagen, precio, nombre} = productos

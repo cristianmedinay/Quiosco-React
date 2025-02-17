@@ -32,15 +32,7 @@ export const Layout = () => {
         </main>
         <Resumen />
       </div>
-      {/* <Main>
-
-        <img src="../public/img/logo.svg" alt="Logo" />
-
-        <div>
-          <Outlet />        
-          
-        </div>
-      </Main> */}
+     
     </>
   )
 }

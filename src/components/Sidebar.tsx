@@ -1,10 +1,13 @@
 import React from 'react'
-import {categorias} from '../data/categorias'
+
 import Categoria from './Categoria'
+import { useQuiosco } from '../hooks/useQuiosco'
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 
 const Sidebar = () => {
+
+    const {categorias} = useQuiosco()
   return (
     <div className='md:w-72'>
         <div className='p-4'>
@@ -14,7 +17,7 @@ const Sidebar = () => {
 
         <div className='mt-10'>
             {
-                categorias.map(categoria => (
+                categorias.map((categoria) => (
                    <Categoria key={categoria.id} {...categoria} />
                 ))
             }
