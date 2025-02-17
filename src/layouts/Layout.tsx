@@ -1,7 +1,8 @@
 import React from 'react'
-/* import { Outlet } from 'react-router-dom'
-import styled from 'styled-components'
- */
+import { Outlet } from 'react-router-dom'
+import Sidebar from '../components/Sidebar'
+import Resumen from '../components/Resumen'
+
 /* const Main = styled.div`
   max-width: 56rem; 
   margin: 2.5rem auto 0; 
@@ -22,6 +23,15 @@ import styled from 'styled-components'
 export const Layout = () => {
   return (
     <>
+
+      <div className='md:flex'>
+        <Sidebar />
+
+        <main className='flex-1 h-screen overflow-y-scroll bg-gray-100'>
+          <Outlet />  
+        </main>
+        <Resumen />
+      </div>
       {/* <Main>
 
         <img src="../public/img/logo.svg" alt="Logo" />
