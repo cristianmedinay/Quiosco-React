@@ -11,14 +11,20 @@ export interface QuioscoContextType {
     handleClickModal: () => void;
     modal: boolean,
     handleSetProducto: (producto: ProductosProps) => void,
-    producto: ProductosProps | null;
+    producto: ProductosProps;
     pedido: ProductosProps[],
+    handleAgregarPedido: ( producto: ProductosProps) => void,
+    handleEditarCantidad: (id: number) => void,
+    handleEliminarProductoPedido: (id: number) => void,
+    setTotal: React.Dispatch<React.SetStateAction<number>>
+    total: number,
 }
 
 export interface ProductosProps {
     id:number,
     precio: number,
     nombre: string,
-    imagen: string
-   
+    imagen: string,
+    cantidad: number,
+    categoria_id: number
 }
