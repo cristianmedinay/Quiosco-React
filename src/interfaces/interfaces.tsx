@@ -7,7 +7,12 @@ export interface Categoria {
 export interface QuioscoContextType {
     categorias: Categoria[];
     categoriaActual: Categoria | null;
-    handleClickCategoria: (id: number) => void
+    handleClickCategoria: (id: number) => void;
+    handleClickModal: () => void;
+    modal: boolean,
+    handleSetProducto: (producto: ProductosProps) => void,
+    producto: ProductosProps | null;
+    pedido: ProductosProps[],
 }
 
 export interface ProductosProps {

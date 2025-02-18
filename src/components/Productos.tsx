@@ -2,9 +2,11 @@ import React from 'react'
 
 import {formatearDinero} from '../helpers'    
 import {ProductosProps} from '../interfaces/interfaces'
+import { useQuiosco } from '../hooks/useQuiosco'
 const Productos = (productos: ProductosProps) => {
 
   const {imagen, precio, nombre} = productos
+  const {handleClickModal,handleSetProducto} = useQuiosco();
     
   return (
         
@@ -20,6 +22,12 @@ const Productos = (productos: ProductosProps) => {
                 <button 
                     type='button'
                     className='bg-indigo-600 hover:bg-indigo-800 text-white font-bold p-3 w-full mt-5 uppercase font-bold cursor-pointer text-center'
+                    onClick={() => {
+                        
+                        handleClickModal();
+                        handleSetProducto(productos);
+                        }   
+                    }
                  > 
                     Agregar
                 </button>
